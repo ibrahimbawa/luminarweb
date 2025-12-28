@@ -1,0 +1,255 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0f172a;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #38bdf8;
+}
+
+/* NAV MENU */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-menu li a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* APPLY BUTTON */
+.nav-menu .apply a {
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 8px 18px;
+  border-radius: 6px;
+}
+
+/* MOBILE TOGGLE */
+.nav-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #ffffff;
+}
+
+/* ===== HERO ===== */
+.hero {
+  margin-top: 70px;
+  height: 90vh;
+  background: linear-gradient(to right, #020617, #020617cc),
+              url("images/academy.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  max-width: 800px;
+  padding: 20px;
+  margin-left: 10%;
+}
+
+.hero h1 {
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #cbd5f5;
+  font-size: 18px;
+  max-width: 600px;
+}
+
+/* HERO BUTTONS */
+.hero-buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+.btn.primary {
+  background: #38bdf8;
+  color: #020617;
+}
+
+.btn.secondary {
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 90px 20px;
+}
+
+.section.light {
+  background: #f8fafc;
+}
+
+.section.dark {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.container {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.section p {
+  font-size: 18px;
+  max-width: 720px;
+  margin: auto;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.card {
+  background: #0f172a;
+  padding: 30px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* ===== CENTER CTA ===== */
+.center {
+  text-align: center;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #020617;
+  color: #94a3b8;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #020617;
+    flex-direction: column;
+    display: none;
+    padding: 20px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero-overlay {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* ===== MOBILE NAV FIX ===== */
+@media (max-width: 768px) {
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #0d0d0d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 30px;
+    gap: 20px;
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu li a {
+    font-size: 1.2rem;
+    color: #ffffff;
+    padding: 12px 0;
+    display: block;
+  }
+
+  .nav-menu li.apply a {
+    background: gold;
+    color: #000;
+    font-weight: 700;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 30px;
+  }
+}
