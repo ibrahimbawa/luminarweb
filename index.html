@@ -10,8 +10,16 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-</head>
+</head> 
 <body>
+<script>
+  const toggle = document.getElementById("navToggle");
+  const menu = document.getElementById("navMenu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+</script>
 
 <!-- NAV -->
 <nav class="navbar">
@@ -19,9 +27,9 @@
     <div class="logo">LUMINAR</div>
     <ul class="nav-menu">
       <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.HTML">Founder</a></li>
+      <li><a href="about.html">Founder</a></li>
       <li><a href="academy.html">Academy</a></li>
-      <li><a href="Mentorship.HTML">Mentorship</a></li>
+      <li><a href="Mentorship.html">Mentorship</a></li>
       <li><a href="Book.html">Books</a></li>
       <li><a href="community.html">Community</a></li>
       <li><a href="https://ibrahimbawa56.systeme.io/luminarentry" class="btn-nav">Apply</a></li>
@@ -48,7 +56,7 @@
 <section class="section light">
   <h2>What Is Luminar?</h2>
   <p class="center max">
-    Luminar is not a program. It is a leadership institution in formation —
+    Luminar is not a program. It is a leadership institution in formation
     designed to raise individuals who think clearly, act responsibly,
     and build value beyond systems.
   </p>
@@ -80,7 +88,7 @@
 <section class="section light">
   <h2>Mentorship That Rebuilds the Human Being</h2>
   <p class="center max">
-    Luminar mentorship is selective, structured, and transformational —
+    Luminar mentorship is selective, structured, and transformational
     focused on identity, clarity, discipline, and leadership capacity.
   </p>
   <div class="center">
